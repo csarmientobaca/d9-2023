@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Container, Row, Col, Form } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import Job from './Job'
 
 const MainSearch = () => {
@@ -48,6 +49,9 @@ const MainSearch = () => {
           {jobs.map((jobData) => (
             <Job key={jobData._id} data={jobData} />
           ))}
+        </Col>
+        <Col>
+          <Link to="/fav" >Favorites</Link >
         </Col>
       </Row>
     </Container>
